@@ -22,6 +22,8 @@ ProjectOTUS/
 ├── build.sbt # Конфиг sbt
 └── README.md
 
+- Actions, CommonScenario, Feeders и config вынес в папку .\src\test\scala\utils
+- Все симуляции запихнул в папку .\src\test\scala\simulations
 
 ## Требования
 
