@@ -1,0 +1,1 @@
+advanceDiscount=0&depart=#{depart}&departDate=12/08/2025&arrive=#{arrive}&returnDate=12/09/2025&numPassengers=1&seatPref=None&seatType=Coach&findFlights.x=39&findFlights.y=9&roundtrip=on

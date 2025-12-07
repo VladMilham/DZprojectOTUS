@@ -1,0 +1,1 @@
+outboundFlight=#{outboundFlight}&numPassengers=1&advanceDiscount=0&seatType=Coach&seatPref=None&reserveFlights.x=59&reserveFlights.y=6
