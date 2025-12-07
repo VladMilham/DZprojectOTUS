@@ -1,6 +1,23 @@
-target
-.idea
-.settings
-.classpath
-.project
-.bsp
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Build
+target/
+out/
+project/target/
+.sbt
+
+# Gatling
+results/
+*.log
+
+# Temp
+*.tmp
+~*
+.DS_Store
+
+# Dependencies (опционально, обычно коммитят)
+# lib_managed/
+# project/boot/

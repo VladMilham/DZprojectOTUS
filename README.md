@@ -1,17 +1,46 @@
-Gatling plugin for SBT - Scala demo project
-===========================================
+# Gatling Load Testing - Project OTUS
 
-A simple showcase of an SBT project using the Gatling plugin for SBT. Refer to the plugin documentation
-[on the Gatling website](https://docs.gatling.io/reference/integrations/build-tools/sbt-plugin/) for usage.
+Проект нагрузочного тестирования веб-приложения WebTours с использованием Gatling.
 
-This project is written in Scala. For other languages, consider using
-[our other supported build plugins](https://docs.gatling.io/reference/integrations/build-tools/).
+## Структура проекта
 
-It includes:
+ProjectOTUS/
+├── src/
+│ └── test/
+│ ├── resources/
+│ │ ├── users.csv # Фидер с пользователями
+│ │ ├── depart.csv # Фидер с городами отправления
+│ │ ├── arrive.csv # Фидер с городами прибытия
+│ │ ├── gatling.conf # Конфиг Gatling
+│ │ └── logback-test.xml # Конфиг логирования
+│ └── scala/
+│ └── simulations/
+│ ├── CommonScenario.scala # Основной сценарий
+│ ├── Debug.scala # Debug симуляция
+│ └── CapacityTest.scala # Тест поиска максимума
+├── build.sbt # Конфиг sbt
+└── README.md
 
-* minimal `build.sbt`, requiring [SBT 1](https://www.scala-sbt.org/download.html)
-* latest version of the `io.gatling:gatling-sbt` plugin applied
-* sample [Simulation](https://docs.gatling.io/reference/glossary/#simulation) class,
-  demonstrating sufficient Gatling functionality
-* proper source file layout
-  * both the `test` and `it` (integration test) configurations are shown
+
+## Требования
+
+- Java 17+
+- Scala 2.13
+- sbt 1.11.7+
+- Gatling 3.10.4
+
+## Запуск
+
+Debug тест на 1 пользователя
+sbt "Gatling/testOnly simulations.Debug"
+
+Тест поиска максимума
+sbt "Gatling/testOnly simulations.fMax"
+
+Тест стабильности
+sbt "Gatling/testOnly simulations.stub"
+
+
+## Результаты
+
+Отчеты генерируются в `target/gatling/`
